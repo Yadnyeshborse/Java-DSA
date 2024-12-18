@@ -2,16 +2,17 @@ package Recurrision.General_question;
 
 public class Demo {
     public static void main(String[] args) {
-        print(5);
+        int no=1234;
+        int result=reva(no,0);
+        System.out.println(result);
     }
-    public static void print(int n){
-        if (n==10){
-            return;
+
+    private static int reva(int no, int reverse) {
+        if(no==0){
+            return reverse;
         }
-        System.out.println(n);
-        print(n+1);
-
+        int remainder=no%10;
+        reverse=reverse*10+remainder;
+        return reva(no/10,reverse);
     }
-
-
 }
