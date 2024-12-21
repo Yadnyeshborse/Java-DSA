@@ -20,9 +20,9 @@ public class SearchInCircularArray {
 
         if (arr[start]<arr[mid]) {
             if (target >= arr[start] && target <= arr[mid]) {
-                return search(arr, target, start, mid-1);
+                return search(arr, target, start, mid-1);  //if array is sorted than this condition is enough
             }else {
-                return search(arr,target,mid+1,end);
+                return search(arr,target,mid+1,end);  //if not sorted than this condition is needed ex if tarhet is 2 than need this
             }
         }
         if (target>=arr[mid]&&target<arr[end]){

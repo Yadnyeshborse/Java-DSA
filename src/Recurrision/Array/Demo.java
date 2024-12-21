@@ -10,10 +10,11 @@ public class Demo {
         int result=findElementIndex(arr,target,0);
         System.out.println(result);
         findALL(arr,target,0);
-        System.out.println(listhi);
+        System.out.println(list);
+        ArrayList<Integer> listo= findALLByPassingList(arr,target,0,new ArrayList<>());
+        System.out.println("After passing list "+listo);
+
     }
-
-
 
     private static boolean findElementLinear(int[] arr,int target, int index) {
         if(index==arr.length-1){
@@ -44,6 +45,21 @@ public class Demo {
             list.add(index);
         }
         findALL(arr,target,index+1);
+
+    }
+
+    //______________________________________________________________________________________________
+
+
+    private static ArrayList<Integer> findALLByPassingList(int[] arr, int target, int index, ArrayList<Integer> list) {
+        if (index==arr.length){
+            return list;
+        }
+        if (target==arr[index]){
+            list.add(index);
+        }
+
+            return  findALLByPassingList(arr,target,index+1,list);
 
     }
 }
