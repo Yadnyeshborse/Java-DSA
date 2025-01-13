@@ -10,21 +10,23 @@ public class LL {
         this.size=0;
     }
 
+
+    //assuming empty list starting from 0
     public void insertNext(int val){
-        Node node=new Node(val);
+        Node node=new Node(val);                        // need new node for insting element
         node.next=head;
-        head=node;
+        head=node;                              //head always points to first element
         if (tail==null){
             tail=head;
         }
         size+=1;
     }
     public void inserLast(int val){
-        if (tail==null){
+        if (tail==null){    //if nothing is their i.r empty list
             insertNext(val);
             return;
         }
-        Node node=new Node(val);
+        Node node=new Node(val);    //we need an empty node for inserting than we will assign value of reference node and than wil make that node as reference
         tail.next=node;
         tail=node;
         size++;
@@ -38,7 +40,7 @@ public class LL {
             inserLast(val);
             return;
         }
-        Node temp=head;
+        Node temp=head;      //initialize list
         for (int i=1;i<index;i++){
             temp=temp.next;
         }
@@ -104,9 +106,17 @@ public class LL {
         return null;
     }
 
+    //inserat first
+    public void first(int val){
+        Node node=new Node(val);
+        node.next=head;
+        head=node;
+        size+=1;
+    }
+
     public void display(){
-        Node temp=head;
-        while (temp!= null){
+        Node temp=head;    //we can not do Sysout(head.next) as at last position it will be null
+        while (temp!= null){    //we can not change structure of list as head.next will go on pointing next element
             System.out.print(temp.value+"--->");
             temp=temp.next;
         }

@@ -20,6 +20,7 @@ public class DLL {
 
         node.next = null;
 
+        //if their is no element
         if (head == null) {
             node.prev = null;
             head = node;
