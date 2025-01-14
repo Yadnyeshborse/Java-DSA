@@ -122,10 +122,43 @@ public class LL {
         }
         System.out.println("END");
     }
+    //__________________________________________________________________________________________________
+
+    // insert using recursion
+    // Public method to insert a value at a specific index using recursion
+    public void insertRec(int value, int index) {
+        head = insertRec(value, index, head); // Start recursion with the head of the list
+    }
+
+    // Private recursive method to handle the insertion
+    private Node insertRec(int value, int index, Node node) {
+        // Base case: If the index is 0, insert the new node here
+        if (index == 0) {
+            Node temp = new Node(node, value); // Create a new node with the given value and next pointing to the current node
+            size++; // Increment the size of the list
+            return temp; // Return the new node, which becomes the new head (or part of the chain)
+        }
+
+        // Recursive case: Move to the next node, reducing the index by 1
+        node.next = insertRec(value, index - 1, node.next);
+
+        // Return the current node to maintain the chain
+        return node;
+    }
+
 
     private class Node{
         private int value;
         private Node next;
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "value=" + value +
+                    ", next=" + next +
+                    '}';
+        }
+
 
         public Node(int value) {
             this.value = value;

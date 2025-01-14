@@ -9,5 +9,8 @@ public class Main2DLL {
         obj.dispaly();
         obj.insertLast(90);
         obj.dispaly();
+        System.out.println("_______________________");
+        obj.insert(12,65);
+        obj.dispaly();
     }
 }
