@@ -168,4 +168,116 @@ public class LL {
             this.value = value;
         }
     }
+
+    //questions
+    //leetcode
+    //https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/
+    public void removeDuplicate(){
+        Node node=head;
+
+        while (node.next!=null){
+            if (node.value==node.next.value){
+                node.next=node.next.next;
+                size--;
+            }else {
+                node=node.next;
+            }
+        }
+        tail=node;
+        tail.next=null;
+    }
+
+    //leetcode   https://leetcode.com/problems/merge-two-sorted-lists/description/
+    public static LL merge(LL first,LL second){
+
+        Node f=first.head;
+        Node s=second.head;
+        LL ans=new LL();
+        while (f!=null && s!=null){
+            if (f.value< s.value){
+                ans.inserLast(f.value);
+                f=f.next;
+            }else {
+                ans.inserLast(s.value);
+                s=s.next;
+            }
+        }
+        if (f!=null){
+            ans.inserLast(f.value);
+            f=f.next;
+        }
+        if (s!=null){
+            ans.inserLast(s.value);
+            s=s.next;
+        }
+        return ans;
+
+    }
+
+    //cycle problem
+    //https://leetcode.com/problems/linked-list-cycle/description/
+
+    //leetcode
+    //https://leetcode.com/problems/sort-list/description/
+
+    //reverse by recurrision
+
+    private void reverse(Node node){
+        if (node==tail){
+            head=tail;
+        }
+
+        reverse(node.next);
+        tail.next=node;
+        tail=node;
+        tail.next=null;
+    }
+
+    //reverse by iteration
+    //https://leetcode.com/problems/reverse-linked-list/description/
+    public void reverseByIteration(Node node){
+        if (size<2){
+            return;
+        }
+        Node previous=null;
+        Node present=head;
+        Node next=present.next;
+        while (present!=null){
+            present.next=previous;
+            previous=present;
+            present=next;
+            if (next!=null){
+                next=next.next;
+            }
+        }
+        head=previous;
+    }
+
+    public static void main(String[] args) {
+        LL ll=new LL();
+        //for duplicate
+//        ll.inserLast(1);
+//        ll.inserLast(2);
+//        ll.inserLast(3);
+//        ll.inserLast(3);
+//        ll.inserLast(4);
+//        ll.display();;
+//        ll.removeDuplicate();
+//        ll.display();
+
+        LL first=new LL();
+        LL second=new LL();
+
+        first.inserLast(1);
+        first.inserLast(3);
+        first.inserLast(5);
+
+        second.inserLast(2);
+        second.inserLast(6);
+        second.inserLast(8);
+        second.inserLast(20);
+        LL ans=LL.merge(first,second);
+        ans.display();
+
+    }
 }
