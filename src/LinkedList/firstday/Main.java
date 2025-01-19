@@ -19,5 +19,9 @@ public class Main {
         obj.delete(3);
         obj.display();
         obj.find(5);
+        obj.first(90);
+        obj.display();
+        obj.insertRec(23,2);
+        obj.display();
     }
 }

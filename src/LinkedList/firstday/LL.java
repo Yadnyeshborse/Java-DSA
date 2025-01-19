@@ -10,21 +10,23 @@ public class LL {
         this.size=0;
     }
 
+
+    //assuming empty list starting from 0
     public void insertNext(int val){
-        Node node=new Node(val);
+        Node node=new Node(val);                        // need new node for insting element
         node.next=head;
-        head=node;
+        head=node;                              //head always points to first element
         if (tail==null){
             tail=head;
         }
         size+=1;
     }
     public void inserLast(int val){
-        if (tail==null){
+        if (tail==null){    //if nothing is their i.r empty list
             insertNext(val);
             return;
         }
-        Node node=new Node(val);
+        Node node=new Node(val);    //we need an empty node for inserting than we will assign value of reference node and than wil make that node as reference
         tail.next=node;
         tail=node;
         size++;
@@ -38,7 +40,7 @@ public class LL {
             inserLast(val);
             return;
         }
-        Node temp=head;
+        Node temp=head;      //initialize list
         for (int i=1;i<index;i++){
             temp=temp.next;
         }
@@ -104,18 +106,59 @@ public class LL {
         return null;
     }
 
+    //inserat first
+    public void first(int val){
+        Node node=new Node(val);
+        node.next=head;
+        head=node;
+        size+=1;
+    }
+
     public void display(){
-        Node temp=head;
-        while (temp!= null){
+        Node temp=head;    //we can not do Sysout(head.next) as at last position it will be null
+        while (temp!= null){    //we can not change structure of list as head.next will go on pointing next element
             System.out.print(temp.value+"--->");
             temp=temp.next;
         }
         System.out.println("END");
     }
+    //__________________________________________________________________________________________________
+
+    // insert using recursion
+    // Public method to insert a value at a specific index using recursion
+    public void insertRec(int value, int index) {
+        head = insertRec(value, index, head); // Start recursion with the head of the list
+    }
+
+    // Private recursive method to handle the insertion
+    private Node insertRec(int value, int index, Node node) {
+        // Base case: If the index is 0, insert the new node here
+        if (index == 0) {
+            Node temp = new Node(node, value); // Create a new node with the given value and next pointing to the current node
+            size++; // Increment the size of the list
+            return temp; // Return the new node, which becomes the new head (or part of the chain)
+        }
+
+        // Recursive case: Move to the next node, reducing the index by 1
+        node.next = insertRec(value, index - 1, node.next);
+
+        // Return the current node to maintain the chain
+        return node;
+    }
+
 
     private class Node{
         private int value;
         private Node next;
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "value=" + value +
+                    ", next=" + next +
+                    '}';
+        }
+
 
         public Node(int value) {
             this.value = value;
