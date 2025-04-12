@@ -10,13 +10,13 @@ public class BinaryTreeMain {
 //        tree.display();
 
         BinarySearchTree searchTree=new BinarySearchTree();
-        int[] nums= {5,2,7,1,4,6,9,8,2,10};
-//        searchTree.populate(nums);
-//        searchTree.display();
-
-        searchTree.populatedSorted(nums);
+        int[] nums= {5,2,7,1,4,6,9,8,10};
+        searchTree.populate(nums);
         searchTree.display();
-        System.out.println(searchTree.isBalanced());
+
+//        searchTree.populatedSorted(nums);    //use if tree is sorted
+//        searchTree.display();
+        System.out.println("Is Tree Balancled="+searchTree.isBalanced());
         searchTree.prettyDisplay();
 
     }
