@@ -81,44 +81,66 @@ public class BinaryTrees {
         prettyDisplay(node.left, level + 1);
     }
 
+    // Pre-Order Traversal (Root -> Left -> Right)
     public void preOrder(){
         preOrder(root);
+        System.out.println(); // Print new line for clarity
     }
 
     private void preOrder(Node node) {
-        if (node==null){
+        if (node == null) {
             return;
         }
-        System.out.println(node.value+" ");
+        System.out.print(node.value + " ");
         preOrder(node.left);
         preOrder(node.right);
     }
 
+    // In-Order Traversal (Left -> Root -> Right)
     public void inOrder(){
         inOrder(root);
+        System.out.println();
     }
 
     private void inOrder(Node node) {
-        if (node==null){
+        if (node == null) {
             return;
         }
-        preOrder(node.left);
+        inOrder(node.left);
         System.out.print(node.value + " ");
-        preOrder(node.right);
+        inOrder(node.right);
     }
+
+    // Post-Order Traversal (Left -> Right -> Root)
     public void postOrder() {
-        preOrder(root);
+        postOrder(root);
+        System.out.println();
     }
 
     private void postOrder(Node node) {
         if (node == null) {
             return;
         }
-        preOrder(node.left);
-        preOrder(node.right);
+        postOrder(node.left);
+        postOrder(node.right);
         System.out.print(node.value + " ");
     }
 
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        BinaryTrees tree = new BinaryTrees();
+        tree.populate(scanner);
 
+        System.out.println("Tree Display:");
+        tree.prettyDisplay();
 
+        System.out.println("\nPre-Order Traversal:");
+        tree.preOrder();
+
+        System.out.println("In-Order Traversal:");
+        tree.inOrder();
+
+        System.out.println("Post-Order Traversal:");
+        tree.postOrder();
+    }
 }
