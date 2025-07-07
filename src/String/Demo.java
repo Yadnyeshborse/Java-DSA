@@ -5,29 +5,31 @@ import java.util.Arrays;
 public class Demo {
     public static void main(String[] args) {
 
-        String str="ASNAAJDOKOPP;" ;
-        char ch[]=str.toCharArray();
-        int temp[]=new int[ch.length];
+        String str="ASNAAJDOKOPP" ;
+        int[] temp=new int[str.length()];
+        char[] main=str.toCharArray();
         int visited=-1;
-
-        for (int i=0;i<ch.length;i++){
-            if (temp[i]==visited){
-                continue;
-            }
+        System.out.println(main);
+        for (int i = 0; i <main.length ; i++) {
+            if (temp[i]==visited)continue;
             int count=1;
-            for (int j=i+1;j<ch.length;j++){
-                if (ch[i]==ch[j]){
+            for (int j = i+1; j <main.length ; j++) {
+                if (main[i]==main[j]){
                     temp[j]=visited;
                     count++;
                 }
             }
-            temp[i]=count;
-        }
-
-        for (int i=0;i<temp.length;i++){
-            if (temp[i]>1){
-                System.out.println(ch[i]+" "+temp[i]);
+            if (temp[i]!=visited){
+                temp[i]=count;
             }
+
+        }
+        System.out.println(Arrays.toString(temp));
+        for (int i = 0; i < temp.length; i++) {
+            if (temp[i]>=1){
+                System.out.println(main[i]+" count="+temp[i]);
+            }
+
         }
     }
 
