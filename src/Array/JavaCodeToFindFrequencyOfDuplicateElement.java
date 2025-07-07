@@ -1,8 +1,6 @@
 package Array;
 
-import java.util.Arrays;
-
-public class JavaCodeToFindFrequencyOfElement {
+public class JavaCodeToFindFrequencyOfDuplicateElement {
     public static void main(String[] args) {
         int[] arr={1, 2, 8, 3, 2, 2, 2, 5, 1};
         int freq[]=new int[arr.length];
@@ -22,7 +20,7 @@ public class JavaCodeToFindFrequencyOfElement {
         }
 
         for (int k=0;k<freq.length;k++){
-            if (freq[k]>1){
+            if (freq[k]>=1){
                 System.out.println(arr[k]+"="+freq[k]);
             }
         }

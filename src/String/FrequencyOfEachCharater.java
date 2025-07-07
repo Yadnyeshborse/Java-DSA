@@ -20,8 +20,8 @@ public class FrequencyOfEachCharater {
             temp[i]=count;
         }
         for (int i=0;i<temp.length;i++){
-            if (temp[i]>1){
-                System.out.println(temp[i]+" "+ch[i]);
+            if (temp[i]>=1){
+                System.out.println(ch[i]+" "+temp[i]);
             }
         }
     }

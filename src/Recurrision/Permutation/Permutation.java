@@ -16,8 +16,8 @@ public class Permutation {
         char ch=letter.charAt(0);
         for (int i=0;i<=space.length();i++){
             String startLetter=space.substring(0,i);
-            String  ebdLetter=space.substring(i,space.length());
-            count+=permutationsExample(startLetter+ch+ebdLetter,letter.substring(1));
+            String  endLetter=space.substring(i,space.length());
+            count+=permutationsExample(startLetter+ch+endLetter,letter.substring(1));
         }
         return count;
     }
