@@ -1,6 +1,6 @@
 package Array;
 
-public class CheckArrayIfPerfectSqurt {
+public class CheckNoIsPerfectSqurt {
     public static void main(String[] args) {
         int sqo=20;
         double sq=Math.sqrt(sqo);
