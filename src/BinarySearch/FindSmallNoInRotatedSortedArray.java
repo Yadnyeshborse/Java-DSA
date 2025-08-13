@@ -45,3 +45,11 @@ public class FindSmallNoInRotatedSortedArray {
         return -1;
     }
 }
+
+//You can still use binary search, but with an extra check:
+//Find mid.
+//Determine which half is sorted.
+//Decide whether the target lies in that sorted half:
+//If yes → search in that half.
+//If no → search in the other half.
+//Repeat until found or start > end.

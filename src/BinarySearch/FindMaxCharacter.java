@@ -2,7 +2,7 @@ package BinarySearch;
 //https://leetcode.com/problems/find-smallest-letter-greater-than-target/
 //1.Same as ceiling problem
 // 2.remove equal codition
-//3. at end it is start=end+1 and start is qual to arr,length so while returning we are using remainder operator
+//3. at end it is start=end+1 and start is equal to arr,length so while returning we are using remainder operator
 public class FindMaxCharacter {  // Ensure this matches the file name and package
     public static void main(String[] args) {
         char letters[] = {'B', 'C', 'E', 'F'};

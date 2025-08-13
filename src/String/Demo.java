@@ -1,16 +1,21 @@
 package String;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+
 
 public class Demo {
     public static void main(String[] args) {
-        String str1 = "Geeks";
-        String str2 = "Geek";
-        System.out.println(str1.compareTo(str2));
+        int no=123;
+        int res=0,po=no;
+        while (no!=0){
+            res=no%10+res*10;
+            no/=10;
+        }
+        if (res==po){
+            System.out.println("It is palindome");
+        }else {
+            System.out.println("It is not");
+        }
+        
     }
 
 }

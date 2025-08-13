@@ -2,9 +2,10 @@ package String;
 
 public class IndexString {
     public static void main(String[] args) {
+        //index of rerrun -1 if elemet not present
         //1 way
         String name=new String("Yadnyesh");
-        System.out.println(name.indexOf('y'));
+        System.out.println(name.indexOf('z'));
 
         //2 way
         String fullname="Yadnyesh Borse";

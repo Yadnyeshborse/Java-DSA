@@ -5,7 +5,7 @@ public class CeilingOfNo {
         int arr[]={1,3,6,9,11,14,15,18};
         int target=13;
         CeilingOfNo no=new CeilingOfNo();
-
+       //The ceiling of a number refers to the smallest integer that is greater than or equal to that number.
         System.out.println(no.findno(arr,target));
 
     }
