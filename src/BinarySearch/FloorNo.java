@@ -5,7 +5,7 @@ public class FloorNo {
         int arr[]={1,3,6,9,11,14,15,18};
         int target=13;
         FloorNo no=new FloorNo();
-
+       //The floor of a number is the largest integer that is less than or equal to
         System.out.println(no.findno(arr,target));
 
     }

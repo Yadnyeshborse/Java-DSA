@@ -50,3 +50,5 @@ public int findno(int[] arr,int target,boolean fistindex){
 
 
 
+
+

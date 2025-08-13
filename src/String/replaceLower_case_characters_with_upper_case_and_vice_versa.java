@@ -1,6 +1,6 @@
 package String;
 
-public class repllower_case_characters_with_upper_case_and_vice_versa {
+public class replaceLower_case_characters_with_upper_case_and_vice_versa {
     public static void main(String[] args) {
         String str = "Great Power?>";
         StringBuilder builder=new StringBuilder();

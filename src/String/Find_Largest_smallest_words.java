@@ -7,8 +7,6 @@ public class Find_Largest_smallest_words {
         String string = "Hardships often prepare ordinary people for an extraordinary destiny";
         String words[]=string.split(" ");
         System.out.println(Arrays.toString(words));
-        int[] temp=new int[words.length];
-        int visited=-1;
         String min=words[0];
         String  max=words[0];
         for (int i = 1; i <words.length ; i++) {

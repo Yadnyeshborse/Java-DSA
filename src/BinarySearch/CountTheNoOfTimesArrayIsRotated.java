@@ -28,10 +28,14 @@ public class CountTheNoOfTimesArrayIsRotated {
         while (start <= end) {
             int mid = start + (end - start) / 2;
 
-            // Check if mid is the pivot
+            // If mid is greater than the element after it,
+            //Then mid is the pivot (largest element before the rotation).
             if (mid < end && arr[mid] > arr[mid + 1]) {
                 return mid;
             }
+
+            // If mid is smaller than the element before it,
+            //Then mid - 1 is the pivot.
             if (mid > start && arr[mid] < arr[mid - 1]) {
                 return mid - 1;
             }
