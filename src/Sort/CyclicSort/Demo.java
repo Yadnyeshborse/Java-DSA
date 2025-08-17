@@ -12,13 +12,14 @@ public class Demo {
     private static void sort(int[] arr) {
         int i=0;
         while (i<arr.length){
-            int correct=arr[i]-1;
-            if (arr[i]!=arr[correct]){
-                swap(arr,i,correct);
+            int correctIndex=arr[i]-1;
+            if (arr[i]!=arr[correctIndex]){
+                swap(arr,i,correctIndex);
             }else {
-                i++;  //aftee sorting it willl value if i till loop break
+                i++;
             }
         }
+
     }
 
     public static void swap(int[] arr,int first,int second){
