@@ -1,5 +1,4 @@
 package Genereal_Problem;
-
 public class Factorial {
     public static void main(String[] args) {
         int result=1;

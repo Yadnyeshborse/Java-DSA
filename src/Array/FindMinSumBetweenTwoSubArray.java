@@ -24,8 +24,8 @@ public class FindMinSumBetweenTwoSubArray {
         int[] arr1 = {7 ,6 ,8 ,1 ,5};
         System.out.println(findMinDifference(arr1)); // Output: 1
 
-        int[] arr2 = {5, 11, 14, 10, 17};
-        System.out.println(findMinDifference(arr2)); // Output: 3
+//        int[] arr2 = {5, 11, 14, 10, 17};
+//        System.out.println(findMinDifference(arr2)); // Output: 3
     }
 
 }
