@@ -1,4 +1,4 @@
-package Array;
+package array;
 
 public class ReverseNo {
     public static void main(String[] args) {

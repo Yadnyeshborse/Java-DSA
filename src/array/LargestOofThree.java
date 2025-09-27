@@ -1,4 +1,4 @@
-package Array;
+package array;
 
 public class LargestOofThree {
     public static void main(String[] args) {

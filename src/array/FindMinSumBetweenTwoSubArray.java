@@ -1,4 +1,4 @@
-package Array;
+package array;
 
 public class FindMinSumBetweenTwoSubArray {
     public static int findMinDifference(int[] nums) {

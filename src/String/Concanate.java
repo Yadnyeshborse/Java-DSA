@@ -1,6 +1,6 @@
 package String;
 
-public class ConcateI {
+public class Concanate {
     public static void main(String[] args) {
         String s = "GeeksforGeeks";
         String x=" LPIT";

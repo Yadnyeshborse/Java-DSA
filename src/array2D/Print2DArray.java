@@ -1,4 +1,4 @@
-package Array2D;
+package array2D;
 
 public class Print2DArray {
     public static void main(String[] args) {

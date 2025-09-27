@@ -5,7 +5,7 @@ public class DivideStringInEqualsParts {
         String str = "aaaabbbbcccc";
          int divide=4;
          if (str.length()%divide!=0){
-             System.out.println("Can be divide in equal parts");
+             System.out.println("Can't be divide in equal parts");
          }
          int sub=str.length()/divide;
         for (int i = 0; i <str.length() ; i+=sub) {

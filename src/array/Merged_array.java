@@ -1,4 +1,4 @@
-package Array;
+package array;
 
 import java.util.Arrays;
 
@@ -18,7 +18,7 @@ public class Merged_array {
         while (i < a.length && j < b.length) {
             merged[k++] = a[i] < b[j] ? a[i++] : b[j++];
         }
-
+        //This two are outside while loop
         while (i < a.length) {
             merged[k++] = a[i++];
         }

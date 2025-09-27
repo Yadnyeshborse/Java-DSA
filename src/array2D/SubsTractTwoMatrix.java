@@ -1,4 +1,4 @@
-package Array2D;
+package array2D;
 
 public class SubsTractTwoMatrix {
     public static void main(String[] args) {
