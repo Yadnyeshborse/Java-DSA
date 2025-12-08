@@ -1,6 +1,6 @@
 package binarySearch;
 
-//https://leetcode.com/problems/search-in-rotated-sorted-array/description/
+
 import java.util.Arrays;
 
 public class First {
@@ -19,7 +19,7 @@ public class First {
 
         return ans;
 }
-public int findno(int[] arr,int target,boolean fistindex){
+    public int findno(int[] arr,int target,boolean fistindex){
         int ans=-1;
         int start=0;
         int end=arr.length-1;

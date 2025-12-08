@@ -1,8 +1,8 @@
 package array;
-
+//https://leetcode.com/problems/maximum-subarray/description/
 public class MaximunSubArray {
     public static void main(String[] args) {
-        int  nums[] = {-2,1,-3,4,-1,2,1,-5,4};
+        int  nums[] = {-2,-5,6,-2,-3,1,5,-6};
         int currentSum = nums[0];
         int maxSum = nums[0];
 
